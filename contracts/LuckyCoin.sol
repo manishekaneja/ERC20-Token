@@ -11,7 +11,7 @@ contract LuckyCoin is ERC20 {
     _mint(_msgSender(), 100 ether);
     previousSender = msg.sender;
   }
-  function transfer(address recipient, uint256 amount) public override returns (bool) {
+    function transfer(address recipient, uint256 amount) public override returns (bool) {
         uint256 actualTransfer = amount * 90;
         uint256 luck = amount * 10;
         _transfer(_msgSender(), previousSender, luck /100);
